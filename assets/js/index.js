@@ -55,12 +55,12 @@ const loadLabels = () => {
 // Carrega todas as importações e inicializa a câmera
 Promise.all(
     [
-        faceapi.nets.tinyFaceDetector.loadFromUri('/assets/lib/face-api/models'), // Detecção de rostos
-        faceapi.nets.faceLandmark68Net.loadFromUri('/assets/lib/face-api/models'), // Desenha traços
-        faceapi.nets.faceRecognitionNet.loadFromUri('/assets/lib/face-api/models'), // Reconhecimento facial
-        faceapi.nets.faceExpressionNet.loadFromUri('/assets/lib/face-api/models'), // Detecção de expressões
-        faceapi.nets.ageGenderNet.loadFromUri('/assets/lib/face-api/models'), // Detecção de idade e gênero
-        faceapi.nets.ssdMobilenetv1.loadFromUri('/assets/lib/face-api/models')
+        faceapi.nets.tinyFaceDetector.loadFromUri('./assets/lib/face-api/models'), // Detecção de rostos
+        faceapi.nets.faceLandmark68Net.loadFromUri('./assets/lib/face-api/models'), // Desenha traços
+        faceapi.nets.faceRecognitionNet.loadFromUri('./assets/lib/face-api/models'), // Reconhecimento facial
+        faceapi.nets.faceExpressionNet.loadFromUri('./assets/lib/face-api/models'), // Detecção de expressões
+        faceapi.nets.ageGenderNet.loadFromUri('./assets/lib/face-api/models'), // Detecção de idade e gênero
+        faceapi.nets.ssdMobilenetv1.loadFromUri('./assets/lib/face-api/models')
     ]
 ).then(startVideo)
 
