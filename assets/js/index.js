@@ -66,6 +66,7 @@ Promise.all(
 
 // Adiciona eventos ao iniciar a câmera
 cam.addEventListener('play', async () => {
+    requestCameraPermission();
     // Cria um canvas e define seu tamanho
     const canvas = faceapi.createCanvasFromMedia(cam)
     const canvasSize = {
