@@ -1,7 +1,8 @@
 const cam = document.getElementById('cam')
 
 /* Retorna uma lista de dispositivos */
-const startVideo = () => {
+
+/*const startVideo = () => {
     // Acesso a câmera default (padrão)
     navigator.getUserMedia(
         { audio: false, video: true }, 
@@ -32,6 +33,23 @@ const startVideo = () => {
             }
         }
     )*/
+//}
+
+
+const startVideo = async () => {
+    try {
+        // Verifica se o navegador suporta o método getUserMedia
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: true });
+            cam.srcObject = stream;
+        } else {
+            // Se o navegador não suporta, mostra uma mensagem de erro
+            console.error('O navegador não suporta getUserMedia');
+        }
+    } catch (error) {
+        // Trata qualquer erro ocorrido durante a solicitação da câmera
+        console.error('Erro ao acessar a câmera:', error);
+    }
 }
 
 const loadLabels = () => {
@@ -66,7 +84,6 @@ Promise.all(
 
 // Adiciona eventos ao iniciar a câmera
 cam.addEventListener('play', async () => {
-    requestCameraPermission();
     // Cria um canvas e define seu tamanho
     const canvas = faceapi.createCanvasFromMedia(cam)
     const canvasSize = {
