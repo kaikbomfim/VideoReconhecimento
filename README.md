@@ -4,8 +4,8 @@ Essa aplicação web emula um dispositivo de detecção de rostos, em tempo real
 
 - Identificação de expressões faciais: felicidade, tristeza, raiva, nojo, surpresa;
 - Traços do rosto: nariz, olhos, boca, orelhas;
-- Reconhecimento Facial: comparação do rosto capturado com a base de dados pré-existente.
-- Detecção de idade e gênero;
+- Reconhecimento Facial: comparação do rosto capturado com a base de dados pré-existente;
+- Detecção de idade e gênero.
 
 ## Utilização
 
