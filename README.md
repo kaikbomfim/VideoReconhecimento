@@ -9,7 +9,7 @@ Essa aplicação web emula um dispositivo de detecção de rostos, em tempo real
 
 ## Utilização
 
-Para testar o projeto no navegador, acesse o link a seguir: [https://kaikbomfim.github.io/video-reconhecimento/](https://kaikbomfim.github.io/VideoReconhecimento/)
+Para testar o projeto no navegador, acesse o link a seguir: [https://kaikbomfim.github.io/VideoReconhecimento/](https://kaikbomfim.github.io/VideoReconhecimento/)
 
 Ao carregar a página, será necessário habilitar o uso da câmera. Clicar em **"permitir desta vez"** é suficiente para rodar a aplicação.
 
